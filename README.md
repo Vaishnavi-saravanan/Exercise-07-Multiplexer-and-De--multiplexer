@@ -97,7 +97,7 @@ endmodule
 ```
 # RTL LOGIC
 # MULTIPLEXER
-![Screenshot 2023-05-14 180722](https://github.com/Vaishnavi-saravanan/Exercise-07-Multiplexer-and-De--multiplexer/assets/118541897/0c13f6a3-e7e6-4271-b647-319838ea2d21)
+![Screenshot 2023-05-14 181502](https://github.com/Vaishnavi-saravanan/Exercise-07-Multiplexer-and-De--multiplexer/assets/118541897/72afb2ac-4e40-4501-b598-673e7a5cf3b0)
 # DEMULTIPLEXER
 ![Screenshot 2023-05-14 181515](https://github.com/Vaishnavi-saravanan/Exercise-07-Multiplexer-and-De--multiplexer/assets/118541897/76010ac2-057c-466f-8531-082cfef1e0b2)
 # TIMING DIGRAMS
