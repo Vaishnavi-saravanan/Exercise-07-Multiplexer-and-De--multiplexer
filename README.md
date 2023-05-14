@@ -44,45 +44,79 @@ If the data bit D is low, the output Y1 is low. IF data bit D is high, the outpu
 
 If the control input changes to AB = 10, then all the gates are restricted except the third AND gate from the top. Then, data bit D is transmitted only to the output Y2; and, Y2 = Data. . The best example of 1X4 demultiplexer is IC 74155.
 
- 
- 
-### Procedure
-/* write all the steps invloved */
+# Procedure
+# Step 1
+Create a project with required entities.
 
+# Step 2
+Create a module along with respective file name for both Multiplexer and De-multiplexer.
 
+# Step 3
+Run the module and get the respective RTL outputs.
 
-### PROGRAM 
-/*
+# Step 4
+Create university program(VWF) for getting timing diagram.
+
+# Step 5
+Give the respective inputs for timing diagram and obtain the results.
+
+# PROGRAM
+```
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by: VAISHNAVI S
+RegisterNumber: 212222230165 
+```
+# MULTIPLEXER
+```
+module multi (s0,s1,a0,a1,a2,a3,y);
+input s0,s1,a0,a1,a2,a3;
+output y;
+wire a,b,c,d,s0bar,s1bar;
+not (s0bar,s0);
+not (s1bar,s1);
+and (a,s0,s1,a3);
+and (b,s0bar,s1,a2);
+and (c,s0,s1bar,a1);
+and (d,s0bar,s1bar,a0);
+or (y,a,b,c,d);
+endmodule
+```
+# DEMULTIPLEXER
+```
+module demul(y0,y1,y2,y3,s0,s1,i);
+input s0,s1,i;
+output y0,y1,y2,y3;
+wire sbar,s1bar;
+nor(sbar,s0);
+nor(s1bar,s1);
+and(y0,i,sbar,s1);
+and(y1,i,sbar,s1bar);
+and(y2,i,s0,s1bar);
+and(y3,i,s0,s1);
+endmodule
+```
+# RTL LOGIC
+# MULTIPLEXER
+![Screenshot 2023-05-14 180722](https://github.com/Vaishnavi-saravanan/Exercise-07-Multiplexer-and-De--multiplexer/assets/118541897/0c13f6a3-e7e6-4271-b647-319838ea2d21)
+# DEMULTIPLEXER
+![Screenshot 2023-05-14 181515](https://github.com/Vaishnavi-saravanan/Exercise-07-Multiplexer-and-De--multiplexer/assets/118541897/76010ac2-057c-466f-8531-082cfef1e0b2)
+# TIMING DIGRAMS
+# MULTIPLEXER
+![Screenshot 2023-05-14 181526](https://github.com/Vaishnavi-saravanan/Exercise-07-Multiplexer-and-De--multiplexer/assets/118541897/e1422cc1-23db-4d25-a2a8-809fd854b4ae)
+# DEMULTIPLEXER
+![Screenshot 2023-05-14 181541](https://github.com/Vaishnavi-saravanan/Exercise-07-Multiplexer-and-De--multiplexer/assets/118541897/13c0bc83-96bb-4c4f-9ca6-fc11b979617e)
+# TRUTH TABLE
+# MULTIPLEXER
+![Screenshot 2023-05-14 181548](https://github.com/Vaishnavi-saravanan/Exercise-07-Multiplexer-and-De--multiplexer/assets/118541897/31d5665a-b8a4-444d-a6fc-25e8b9d19ef9)
+# DEMULTIPLEXER
+![Screenshot 2023-05-14 181556](https://github.com/Vaishnavi-saravanan/Exercise-07-Multiplexer-and-De--multiplexer/assets/118541897/9b9290a5-0283-4e35-bdff-3a8ffe374727)
+# RESULTS
+Thus the implementation of Multiplexer and Demultiplexer are verified 
+ 
 
 
 
 
 
 
-### RTL LOGIC  
 
-
-
-
-
-
-
-
-### TIMING DIGRAMS  
-
-
-
-
-
-### TRUTH TABLE 
-
-
-
-
-
-
-### RESULTS 
